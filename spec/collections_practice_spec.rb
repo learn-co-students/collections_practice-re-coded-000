@@ -30,6 +30,14 @@ describe 'collections practice' do
     end
   end
 
+  describe '#swap_elements_from_to' do
+    it 'swap any two giving indexs in the array' do
+      array=[1,2,3,4,5,6,7,8]
+      swap_elements_from_to(array , 2, 4)
+      expect(array).to eq([1,2,5,4,3,6,7,8])
+    end
+  end
+
   # Question 5
   describe '#reverse_array' do
     it 'reverse the order of an array' do
