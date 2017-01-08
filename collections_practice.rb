@@ -11,7 +11,7 @@ end
 def sort_array_char_count(array)
 array.sort
 end
-#================================
+#====================
 def swap_elements(array)
 tem=""
 tem=array[1]
