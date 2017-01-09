@@ -4,6 +4,7 @@ end
 def sort_array_desc(array)
   array.sort! do |a,b|
     b <=> a
+    #or   array.sort.reverse
   end
 end
 def sort_array_char_count(array)
@@ -21,8 +22,11 @@ def swap_elements(array)
  def kesha_maker(array)
    new_array=[]
    array.each do |item|
+
        item=item.sub(item[2],"$")
        new_array<<item
+       #another method
+       #array.each{|element| element[2]="$"}
      end
    new_array
  end
@@ -47,4 +51,13 @@ while index<=array.length-1
   index+=1
 end
 array
+#another method
+#array.each_with_index.collect{|element,index| index !=1? element+"s" : element}
 end
+#def swap_element_from_to(array,index,destination_index)
+#temp=array[indexx]
+#array[index]=array[destination_index]
+#array[destination_index]=temp
+#return array
+# or array[indexx],array[destination_index]=array[destination_index],array[index]
+#end
