@@ -4,14 +4,15 @@ array.sort
 end
 fixnum=[25, 7, 14]
 def sort_array_desc(fixnum)
-  fixnum.sort {|x, y| y <=> x}
+  fixnum.sort.reverse
 end
 
 animals= ["cat", "dogs", "horses"]
 def sort_array_char_count(animals)
-animals.sort_by { |x| x.size }
+animals.sort do |a,b|
+  a.length <=> b.length
 end
-
+end
 array=["blake", "scott", "ashley"]
 def swap_elements(array)
 array[1],array[2] = array[2],array[1]
@@ -34,7 +35,7 @@ end
 array=["apple", "orange", "pear", "avis", "arlo", "ascot" ]
 def find_a(array)
 array.select do |word|
-  word[0] =="a"
+  word.start_with? "a"
 end
 end
 
@@ -43,14 +44,14 @@ num=[11,4,7,8,9,100,134]
 def sum_array(num)
 num.inject(0, :+)
 # num.inject(0){|sum,x| sum + x }
+# def sum_array(array)
+#   sum = 0
+#   array.each do |num|
+#     sum+=num
+#   end
+#   sum
 end
 
 def add_s(array)
-  array.collect do |word|
-    if array[1] == word
-      word
-    else
-      word + "s"
-    end
-  end
+  array.each_with_index.map{|element,index| index !=1 ? element+"s" : element}
 end
