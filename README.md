@@ -59,7 +59,4 @@ Build a method that adds an `"s"` to each word in the array except for the secon
 **Advanced:** *Iterators in Ruby are chainable, see if you can use* `.each_with_index` *in addition to* `.collect` *to solve this one in an elegant way. What happens if you write:*
 
 ```ruby
-[1,2].each_with_index.collect{|element, index| }
-```
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/collections_practice'>Sorting Lab</a> on Learn.co and start learning to code for free.</p>
+[1,2].each_with_index.collect{|element, index
